@@ -145,18 +145,16 @@ let arr1 = [2, 4, 5, 6, 8, 10, 12]
 let arr2 = [1, 2, 3, 4, 5, 6]
 let arr3 = [5, 6, 7, 8, 9, 10, 11, 12]
 let arr4 = [1, 3, 4, 5, 6, 7, 9]
+let arr1Set = Set(arr1)
+let arr2Set = Set(arr2)
+let arr3Set = Set(arr3)
+let arr4Set = Set(arr4)
 
-var newSet = Set<Int>()
-let arrayofArrays = [arr1,arr2,arr3,arr4]
 
-for array in arrayofArrays {
-for number in array {
-newSet.insert(number)
-}
-}
+let arrUnion: Set<Int> = arr1Set.union(arr2Set.union(arr3Set.union(arr4Set)))
+let arrUnionArray = Set(arrUnion)
 
-var newArray = Array(newSet)
-print(newArray.sorted())
+print(arrUnionArray.sorted())
 ```
 
 ## Question 5
